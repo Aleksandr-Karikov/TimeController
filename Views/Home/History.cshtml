@@ -1,0 +1,41 @@
+﻿@using TimeController.Models
+
+
+@model IEnumerable<string>
+
+<style>
+    table {
+        width: 100%; /* Ширина таблицы */
+        background: white; /* Цвет фона таблицы */
+        border-spacing: 1px; /* Расстояние между ячейками */
+    }
+
+    td, th {
+        padding: 5px; /* Поля вокруг текста */
+        width : 200px;
+    }
+</style>
+<table border="1">
+    <tr>
+        <th >Понедельник</th>
+        <th>Вторник</th>
+        <th>Среда</th>
+        <th>Четверг</th>
+        <th>Пятница</th>
+        <th>Суббота</th>
+        <th>Воскресенье</th>
+    </tr>
+    <tr>
+        @{
+
+
+            foreach (var time in Model)
+            {
+                <th>
+                    @time
+                </th>
+            }
+         }
+    </tr>
+
+    </table>
